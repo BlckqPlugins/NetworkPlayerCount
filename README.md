@@ -5,3 +5,5 @@ How to use this plugin:
 ```php
  $plugin = new \NetworkPlayerCount\NetworkPlayerCount\Main();
  $players = $plugin::getTotalNetworkPlayers();
+
+You have to edit the "host.yml" file.

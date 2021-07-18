@@ -20,7 +20,7 @@ class Main extends PluginBase{
 	public function onEnable(): void{
         @mkdir(Server::getInstance()->getDataPath());
         $this->saveResource("host.yml");
-		$config = new Config(Server::getInstance()->getDataPath() . "host.yml", Config::YAML);
+		$config = new Config($this->getDataFolder() . "host.yml", Config::YAML);
 
 		$task = new StartTask($config->get("host"), $config->get("port"));
 		$this->getScheduler()->scheduleRepeatingTask($task, 20 * 5);

@@ -3,6 +3,6 @@
 
 How to get the Online players:
 ```php
- $players = \NetworkPlayerCount\NetworkPlayerCount\Main::getTotalNetworkPlayers() ?? 0;
+$players = \NetworkPlayerCount\NetworkPlayerCount\Main::getTotalNetworkPlayers() ?? 0;
 
 You have to edit the "host.yml" file.

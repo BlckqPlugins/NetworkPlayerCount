@@ -65,7 +65,7 @@ class AsyncQuery extends AsyncTask{
         if (empty($response) or $response === false) {
             return FALSE;
         }
-        if (substr($response, 0, 1) !== "\x1C") {
+        if (!str_starts_with($response, "\x1C")) {
             return FALSE;
         }
         $serverInfo = substr($response, 35);
